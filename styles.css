@@ -1,0 +1,44 @@
+img,
+p,
+h1,
+h2,
+.divider,
+#name-tag {
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  padding: 15px, 0px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Crimson Text";
+}
+
+h1,
+h2 {
+  font-family: "Inter";
+}
+
+.divider {
+    height: 2px;
+    background-color: #0868ac;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#name-tag {
+    font-size: 12px;
+    line-height: 3;
+    font-family: "Roboto";
+}
+
+#steve {
+    max-width: 300px;
+}
