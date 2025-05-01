@@ -44,8 +44,8 @@
       The salad is light, sweet, and refreshing. It tastes like home and summer vacation. With the weather changing here in Rhode Island,
       I decided to make it myself. <br> <br>
       But something didn't taste quite right. Other international students said American produce simply tastes different, 
-      but I couldn't let it go. Upon digging a little deeper, I found research showing that American produce
-      has been losing its nutritional value for decades (Davis et. al, 2004). This isn't just a matter of taste; it's a matter of food quality.<br> <br>
+      but I couldn't understand why. With a little digging, I found research showing that American produce
+      has been losing its nutritional value for decades (Davis et. al, 2004). This wassn't just a matter of taste; it was a matter of food quality.<br> <br>
     </p>
 
     <!-- section 1 -->
@@ -62,18 +62,25 @@
     <p id="graph1-text">
       One serving of salad experienced nearly a 1/4 decline in 8 essential micronutrients since 1950. In other words, had 
       I eaten my salad 70 years ago, it would have been 22% tastier. <br><br>
-      Jokes aside, this decline is cause for concern. Micronutrients greatly impact our overall health, with deficiencies
-      causing <a href="https://www.who.int/health-topics/micronutrients#tab=tab_1">severe and even life-threatening conditions"</a> according to the WHO. Deficiencies are preventable
+      Jokes aside, this chart highlights the distribution of salad components with regards to changes in micronutrient quantities
+      since 1950. One serving of our salad has seen a decline in a whopping 7 out of 8 micronutrients.
+      <br><br>
+      This is cause for concern. Micronutrients greatly impact our overall health, with deficiencies
+      causing <a href="https://www.who.int/health-topics/micronutrients#tab=tab_1">severe and even life-threatening conditions"</a>
+      according to the WHO. Deficiencies are preventable
       through nutrition education and proper food consumption -- but what about people who believe they are already eating enough
-      produce to hit their micronutrient values?
+      produce to hit their micronutrient requirements?
     </p>
 
     <p id="graph2-text" style="display: none;">
-      This is a widespread issue that goes beyond the produce involved in our salad (tomatoes, strawberries, watermelon). The 43 crops 
+      We can take a look at the distribution of percent changes
+      for each crop to better understand nutrient losses across U.S. produce. <br><br>
+      
+      This issue spreads beyond the produce involved in our salad. The 43 crops 
       examined include other berries and fruit, staple crops such as potatoes and corn, leafy greens like spinach or cabbage, 
       root vegetables like carrots, turnips, and parsnips, and many more.
-      For each micronutrient highlighted, more than half of these crops experienced a decline. In some cases, they experienced a 
-      100% decline, meaning the total loss of that nutrient.
+      For each micronutrient highlighted in this chart, more than half of these crops experienced a decline. In some cases, they experienced a 
+      100% decline, meaning the total loss of that nutrient. Unfortunately, the patterns noticed in the salad mirror overall U.S. trends.
     </p>
 
     <div class="clickable-image-container" id="click2-container" style="display: none;">
@@ -101,7 +108,7 @@
       examined crops since 1950 and is primarily found through citrus fruits, berries, and (yes!) potatoes. Other lesser known
       micronutrients that also have a primary produce source include calcium, vitamin B1, and vitamin A. <br> <br>
       Not to mention, many people have some form of restrictive diet that makes them rely more heavily on produce -- 
-      as someone with lactose intolerance, I can't simply chug milk to ingest calcium!
+      as someone with lactose intolerance, I can't drink milk to ingest calcium!
     </p>
 
     <div class="graph4-container">
@@ -110,13 +117,15 @@
       </div>
       <div class="graph4-text">
         <p>
-          However, not all signs are negative. While all micronutrients are still less present than their 1950 
+          However, things may not be too dire. While all micronutrients are still less present than their 1950 
           counterparts, we see some recovery, with 4 of them improving up to nearly 20 percentage points. Furthermore,
           calcium and vitamin A have produce as a primary source, meaning produce is once again becoming a viable way of
           introducing micronutrients into our diet. <br><br>
-          More importantly, a vitamin A deficiency is one of the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7352522/#:~:text=Per%20the%20Dietary%20Guidelines%20for,in%20older%20adults%20%5B9%5D.">
-          most experienced deficiencies </a> in the U.S. 
-          according to the NIH. The recovery of that vitamin in our crops bodes well for the future.
+          It is particularly reassuring to see a spike in vitamin A recover, as vitamin A deficiency is one of the 
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7352522/#:~:text=Per%20the%20Dietary%20Guidelines%20for,in%20older%20adults%20%5B9%5D.">
+          most experienced deficiencies </a> in the U.S. Vitamin A is generally sourced from eggs, dairy products,
+          and leafy, orange, and yellow vegetables -- with more available vitamin A in produce, which is both cheaper
+          and more accessible than animal products, we can hopefully combat these deficiencies more effectively.
         </p>
 
         <div class="clickable-image-container">
@@ -155,7 +164,8 @@
     <div class="hidden-content" id="content4">
 
     <h3><br><br>About the data</h3>
-    <p>The data was sourced from <a href="https://fdc.nal.usda.gov/">USDA National Nutrition Database for Standard Reference</a>
+    <p>This narrative was built through R and Adobe Illustrator for DATA1500 at Brown University. <br><br>
+      The data was sourced from <a href="https://fdc.nal.usda.gov/">USDA National Nutrition Database for Standard Reference</a>
       as well as historical data drawn from the Department of Agriculture’s handbook #8 on produce’s nutritional values to the dataset.
       I used a pre-cleaned dataset from <a href="https://www.kaggle.com/datasets/georgiyfedorov/nutricients">Kaggle</a> 
       for the former, and used <a href="https://pubmed.ncbi.nlm.nih.gov/15637215/">this study (Davis et. al, 2004)</a> to extract snippets from the latter.</p>
