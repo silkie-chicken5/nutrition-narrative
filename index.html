@@ -1,33 +1,168 @@
 <!DOCTYPE html>
-<meta charset="utf-8" />
-
 <html>
-  <head>
-    <title>My Data1500 Project yayayayayay</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <h1>Oh no! Bleh blah bleh</h1>
-    <p id="name-tag">Morgane Pizigo</p>
-    <div class="divider"></div>
+<head>
+  <title>Micronutrient changes in U.S. produce</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header & background img -->
+  <div class="header-container">
+    <div class="header-content">
+      <h1>Summer salads, <br> and how our food has changed in 70 years</h1>
+      <p id="name-tag">Morgane Pizigo</p>
+    </div>
+    <div class="image-source">Source: Dan Meyers</div>
+  </div>
+
+
+  <div class="content">
     <p>
-      Intro paragraph. Yay! Here is a bunch of words. Here are so so so so so so
-      sos so so so so so so so so so sos so so so so so so so so so sos so so so
-      so so many more words.
+      When the weather warms up and the summer fruits ripen, my family brings out this old recipe.
     </p>
-    <img src="img/rhode_island.png" />
-    <p>Omg, a new paragraph. Yay!</p>
 
-    <h2>About this story</h2>
-    <p>Here's a <a href="https://brown.edu/">link</a> to the dataset</p>
-    <p>Here is some joy in life</p>
-    <img id="steve" src="img/steve.jpg" />
-  </body>
+    <div class="recipe-container">
+      <div class="recipe-image">
+        <img src="img/recipe.png" id='recipe-img' alt="Family recipe for summer salad" />
+        <img src="img/tape.png" alt="Tape decoration" class="tape-overlay" />
+      </div>
+      <div class="scrapbook-images">
+        <img src="img/salad1.jpg" alt="Picture of salad 1" class="scrapbook-img scrapbook-img-1">
+        <img src="img/salad2.jpg" alt="Picture of salad 2" class="scrapbook-img scrapbook-img-2">
+        <img src="img/salad3.jpg" alt="Picture of salad 3" class="scrapbook-img scrapbook-img-3">
+      </div>
+    </div>
+
+    <p>
+      The salad is light, sweet, and refreshing. It tastes like home and summer vacation. With the weather changing here in Rhode Island,
+      I decided to make it myself. <br> <br>
+      But something didn't taste quite right. Other international students said American produce simply tastes different, 
+      but I couldn't let it go. Upon digging a little deeper, I found research showing that American produce
+      has been losing its nutritional value for decades (Davis et. al, 2004). This isn't just a matter of taste; it's a matter of food quality.<br> <br>
+    </p>
+
+    <!-- section 1 -->
+    <div class="clickable-image-container">
+      <img src="img/click1.jpg" alt="Click to continue" class="clickable-image" id="click1">
+    </div>
+
+    <div class="hidden-content" id="content1">
+    <div class="graph-container">
+      <img id="graph1" class="active-graph" src="img/graph1.jpg" alt="Micronutrient decline for salad graph" />
+      <img id="graph2" class="graph-toggle" src="img/graph2.jpg" alt="Micronutrient decline for 43 crops graph" />
+    </div>
+
+    <p id="graph1-text">
+      One serving of salad experienced nearly a 1/4 decline in 8 essential micronutrients since 1950. In other words, had 
+      I eaten my salad 70 years ago, it would have been 22% tastier. <br><br>
+      Jokes aside, this decline is cause for concern. Micronutrients greatly impact our overall health, with deficiencies
+      causing <a href="https://www.who.int/health-topics/micronutrients#tab=tab_1">severe and even life-threatening conditions"</a> according to the WHO. Deficiencies are preventable
+      through nutrition education and proper food consumption -- but what about people who believe they are already eating enough
+      produce to hit their micronutrient values?
+    </p>
+
+    <p id="graph2-text" style="display: none;">
+      This is a widespread issue that goes beyond the produce involved in our salad (tomatoes, strawberries, watermelon). The 43 crops 
+      examined include other berries and fruit, staple crops such as potatoes and corn, leafy greens like spinach or cabbage, 
+      root vegetables like carrots, turnips, and parsnips, and many more.
+      For each micronutrient highlighted, more than half of these crops experienced a decline. In some cases, they experienced a 
+      100% decline, meaning the total loss of that nutrient.
+    </p>
+
+    <div class="clickable-image-container" id="click2-container" style="display: none;">
+      <img src="img/click2.jpg" alt="Click to continue" class="clickable-image" id="click2">
+    </div>
+
+    </div>
+
+    <!-- section 2 -->
+    <div class="hidden-content" id="content2">
+
+    <p>
+      <br>
+      Is it really so much of an issue? After all, we can get micronutrients elsewhere, through dairy
+      or meat products. In fact, key micronutrients like iron or vitamin B2 are primarily found
+      through those sources. Couldn't we just compensate with other foods?
+    </p>
+
+    <div class="graph-container">
+      <img src="img/graph3.png" alt="Micronutrient percentage decline bar chart" />
+    </div>
+
+    <p>
+      While that may be true for some micronutrients, others are less lucky. Vitamin C experienced an average 28% decrease across the 
+      examined crops since 1950 and is primarily found through citrus fruits, berries, and (yes!) potatoes. Other lesser known
+      micronutrients that also have a primary produce source include calcium, vitamin B1, and vitamin A. <br> <br>
+      Not to mention, many people have some form of restrictive diet that makes them rely more heavily on produce -- 
+      as someone with lactose intolerance, I can't simply chug milk to ingest calcium!
+    </p>
+
+    <div class="graph4-container">
+      <div class="graph4-image">
+        <img src="img/graph4.png" alt="Nutrient recovery from 1999 to 2015 slope graph" />
+      </div>
+      <div class="graph4-text">
+        <p>
+          However, not all signs are negative. While all micronutrients are still less present than their 1950 
+          counterparts, we see some recovery, with 4 of them improving up to nearly 20 percentage points. Furthermore,
+          calcium and vitamin A have produce as a primary source, meaning produce is once again becoming a viable way of
+          introducing micronutrients into our diet. <br><br>
+          More importantly, a vitamin A deficiency is one of the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7352522/#:~:text=Per%20the%20Dietary%20Guidelines%20for,in%20older%20adults%20%5B9%5D.">
+          most experienced deficiencies </a> in the U.S. 
+          according to the NIH. The recovery of that vitamin in our crops bodes well for the future.
+        </p>
+
+        <div class="clickable-image-container">
+          <img src="img/click3.jpg" alt="Click to continue" class="clickable-image" id="click3">
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- section 3 -->
+    <div class="hidden-content" id="content3">
+    <p>
+      Micronutrients are leached from the soil that the crops grow in, so researchers hypothesize that the decline in 
+      micronutrients is due to the aggressive planting and harvesting cycles that grew increasingly popular in the 1960s. By not
+      letting the land rest between harvests, there are simply not enough micronutrients left to maintain the typical micronutrient 
+      levels we expect to see in produce. <br><br>
+      However, in the late 1970s to early 1980s, new bills regarding regenerative agriculture were passed, leading to greater regulation 
+      of the land and crop cycles. Most famously among these reforms is the <a href="https://www.nrcs.usda.gov/sites/default/files/2022-09/stelprdb1044129-leveraging-farm-policy.pdf">1985 "Farm Bill"</a> which
+      amongst other changes introduced penalties for tilling prairie or grassland and converting wetlands to farmland, as well as paid 
+      farmers to let old land rest by taking it out of production and planting more native grassland. This was the first (land) conservation 
+      bill to be passed in the U.S., and I hypothesize it laid the foundations for the better agricultural practices that allowed
+      some of the micronutrient losses to recover. <br><br><br>
+      We're not out of the woods yet, however. We must still push for greater regenerative practices to be put into place to safeguard
+      our soil for future generations. If we aren't careful, we will lose our crops, our health, and tasty summer salads.
+    </p>
+
+    <div class="clickable-image-container">
+      <img src="img/click4.jpg" alt="Click to continue" class="clickable-image" id="click4">
+    </div>
+
+    </div>
+
+    <!-- section 4 -->
+    <div class="hidden-content" id="content4">
+
+    <h3><br><br>About the data</h3>
+    <p>The data was sourced from <a href="https://fdc.nal.usda.gov/">USDA National Nutrition Database for Standard Reference</a>
+      as well as historical data drawn from the Department of Agriculture’s handbook #8 on produce’s nutritional values to the dataset.
+      I used a pre-cleaned dataset from <a href="https://www.kaggle.com/datasets/georgiyfedorov/nutricients">Kaggle</a> 
+      for the former, and used <a href="https://pubmed.ncbi.nlm.nih.gov/15637215/">this study (Davis et. al, 2004)</a> to extract snippets from the latter.</p>
+  </div>
+  </div>
+
+  <script src="clicking.js"></script>
+</body>
+
 </html>

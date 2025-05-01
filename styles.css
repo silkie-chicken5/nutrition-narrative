@@ -1,22 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Crimson Text', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header with bg image */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: url('img/farmtop.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #faf0e6;
+  z-index: -1;
+}
+
+.header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Img source caption */
+.image-source {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  font-family: "Inter";
+}
+
+/* Content, so all text */
+.content {
+  position: relative;
+  background: #faf0e6;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100vh;
+  padding: 40px 20px;
+  z-index: 1;
+}
+
+/* Recipe & scrapbook img styling */
+
+.recipe-container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.tape-overlay {
+  position: absolute;
+  width: 40%;
+  z-index: 2;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+}
+
+.scrapbook-images {
+  position: relative;
+  flex: 3;
+  width: 400px;
+  margin-left: 50px;
+  min-height: 350px;
+}
+
+.scrapbook-img {
+  position: absolute;
+  max-width: 250px;
+  border: 8px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scrapbook-img-1 {
+  top: 0;
+  left: 20px;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+.scrapbook-img-2 {
+  top: 90px;
+  left: 120px;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.scrapbook-img-3 {
+  top: 180px;
+  left:0px;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+.scrapbook-img:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 4;
+}
+
+.recipe-image {
+  width: 350px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#recipe-img { /* overriding padding */
+  padding: 0;
+  width: 100%;
+}
+
+/* Main elements styling */
+
 img,
 p,
 h1,
-h2,
+h3,
 .divider,
-#name-tag {
+#name-tag,
+#myChart {
   width: 100%;
-  max-width: 640px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
 img {
   display: block;
-  padding: 15px, 0px;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 }
 
 p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.4;
   font-family: "Crimson Text";
 }
@@ -26,19 +175,81 @@ h2 {
   font-family: "Inter";
 }
 
-.divider {
-    height: 2px;
-    background-color: #0868ac;
-    margin-top: 10px;
-    margin-bottom: 10px;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#name-tag {
-    font-size: 12px;
-    line-height: 3;
-    font-family: "Roboto";
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-#steve {
-    max-width: 300px;
+h1, #name-tag {
+  max-width: 800px;
+}
+
+/* Graphs styling */
+.graph-container {
+  position: relative;
+  margin: 20px auto;
+  max-width: 640px;
+}
+
+.graph-toggle {
+  display: none;
+}
+
+.graph4-container {
+  display: flex;
+  max-width: 700px;
+  margin: 20px auto;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.graph4-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.graph-container img,
+.graph4-image img {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.graph4-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Clickable images styling */
+
+.clickable-image-wrapper {
+  width: 200px;
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.clickable-image {
+  width: 230px;
+  height: auto;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+.hidden-content {
+  display: none;
 }
